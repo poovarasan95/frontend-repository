@@ -31,10 +31,11 @@ export const Home = () => {
   
 
   const token = localStorage.getItem('token');
+ const apiUrl = import.meta.env.VITE_API_URL;
 
    //studentInformation
          async function fetchData(){
-       const res = await axios.get("http://localhost:3006/api/auth/studentinfo", {
+       const res = await axios.get(`${apiUrl}/api/auth/studentinfo`, {
           headers: { Authorization: `Bearer ${token}` }
         }) 
         setUser(res.data);
@@ -42,7 +43,7 @@ export const Home = () => {
   //leaveHistoryOption
      
   async function fetchHistory(){
-    const res = await axios.get("http://localhost:3006/api/auth/leaveHistory", {
+    const res = await axios.get(`${apiUrl}/api/auth/leaveHistory`, {
        headers: { Authorization: `Bearer ${token}` }
      }) 
      const today = dayjs().startOf('day');
@@ -81,7 +82,7 @@ export const Home = () => {
 //leaveform
       const onFinish = async () => {
         try {
-              await axios.post(`http://localhost:3006/api/auth/leaveform`,
+              await axios.post(`${apiUrl}/api/auth/leaveform`,
            {  reason,
             startDate: dates[0].toISOString(),
             endDate: dates[1].toISOString()},{headers : { Authorization: `Bearer ${token}` }}
@@ -105,7 +106,7 @@ export const Home = () => {
    //cancel the leave
    const handleCancel = async (id) => {
     try {
-      await axios.delete("http://localhost:3006/api/auth/leaveCancel", {
+      await axios.delete(`${apiUrl}/api/auth/leaveCancel`, {
         data:{ id },
         headers: { Authorization: `Bearer ${token}` }
       }) ; 

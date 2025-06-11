@@ -18,10 +18,11 @@ export const HeaderBar = () => {
   
 
   const token = localStorage.getItem('token');
+  const apiUrl = import.meta.env.VITE_API_URL;
  
      useEffect(() => {
              async function fetchData(){
-           const res = await axios.get("http://localhost:3006/api/auth/studentinfo", {
+           const res = await axios.get(`${apiUrl}/api/auth/studentinfo`, {
               headers: { Authorization: `Bearer ${token}` }
             }) 
             setUser(res.data);
@@ -52,7 +53,7 @@ const handleUpdate = () => {
 const handleSave  = async () => {
  
   try {
-      const res = await axios.put("http://localhost:3006/api/auth/studentinfoUpdate", { username: tempUser.username,
+      const res = await axios.put(`${apiUrl}/api/auth/studentinfoUpdate`, { username: tempUser.username,
         register: tempUser.register,standard: tempUser.standard,section: tempUser.section},
           {headers: { Authorization: `Bearer ${token}` } 
       })

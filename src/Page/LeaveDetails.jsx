@@ -15,10 +15,10 @@ export const LeaveDetails = () => {
  
 
     const token = localStorage.getItem('token');
-
+const apiUrl = import.meta.env.VITE_API_URL;
   
       async function fetchHistory(){
-        const res = await axios.get("http://localhost:3006/api/auth/leaveHistory", {
+        const res = await axios.get(`${apiUrl}/api/auth/leaveHistory`, {
            headers: { Authorization: `Bearer ${token}` }
          }) 
          setLeave(res.data);

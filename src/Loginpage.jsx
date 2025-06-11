@@ -9,10 +9,15 @@ import { useNavigate } from 'react-router-dom';
     const[error,setError]=useState('');
     const navigate=useNavigate()
 
+   const apiUrl = import.meta.env.VITE_API_URL;
+
+
+   console.log("API URL:", apiUrl);
+
     const handlesubmit= async(e)=>{
       e.preventDefault()
       try {
-         const response = await axios.post("http://localhost:3006/api/auth/login",
+         const response = await axios.post(`${apiUrl}/api/auth/login`,
           {register,password}
         );
         
