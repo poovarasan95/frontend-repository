@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from'axios'
 import { useNavigate } from 'react-router-dom'
+import'./signup.css'; 
 
 export const Signup = () => {
     const [register,setRegister]=useState('');
@@ -26,15 +27,16 @@ export const Signup = () => {
        }
     }
   return (
-    <div className='container'>
-      <div className=''>
-        <h2 className='title' >Register Form</h2>
+    <div >
+      <div className='wrapper'>
+        <div className='form-box login'>
         <form onSubmit={handleSubmit}>
-        <div className="main"> 
+          <h1 >Register Form</h1>
+        <div > 
         <label htmlFor='username' className="">
             <strong>Name :</strong>
         </label>
-        <input type='text'className="input-0" name='username'onChange={(e)=>setUsername(e.target.value)} required/>
+        <input type='text' className='input-0' name='username'onChange={(e)=>setUsername(e.target.value)} required/>
         </div> 
         <div className="main"> 
         <label htmlFor='standard' className="">
@@ -75,6 +77,7 @@ export const Signup = () => {
         <p className='m-2'>Already Have an Account</p>
         <Link to="/" className='btn'>Login</Link>
         </center>
+        </div>
       </div>
     </div>
   )

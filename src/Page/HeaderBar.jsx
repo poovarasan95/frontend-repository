@@ -79,7 +79,7 @@ const handleSave  = async () => {
         }}
       >
         <Title level={3} style={{ fontFamily:'Times New Roman',color:'#071098',fontSize:30,marginLeft:350}}>
-          Student Leave Management
+          
         </Title>
 
         <Dropdown overlay={<Menu><Menu.Item onClick={showDrawer}>View Profile</Menu.Item></Menu>} trigger={['click']}>

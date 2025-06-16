@@ -1,0 +1,90 @@
+.wrapper{
+    max-width: 500px;
+    background:transparent;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;margin: 50px auto;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+form h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+form .input-box{
+    width: 80%;
+    height: 50px;
+    margin: 30px;
+    position: relative;
+
+}
+.input-0{
+   margin-left: 28px;
+   margin-bottom: 15px;
+   padding: 2px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 235, 235, 0.922);
+    border-radius: 20px;
+    font-size: 18px;
+   padding: 2px 45px 2px 20px
+}
+.input-1{
+   margin-left: 5px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 235, 235, 0.922);
+    border-radius: 20px;
+    font-size: 18px;
+   padding: 2px 45px 2px 20px
+}
+.input-2{
+    margin-left: 18px;
+     margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+   border: 2px solid rgba(240, 235, 235, 0.922);
+    border-radius: 20px;
+    font-size: 18px;
+   padding: 2px 45px 2px 20px
+}
+.input-3{
+    margin-left: 13px;
+     margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 235, 235, 0.922);
+    border-radius: 20px;
+    font-size: 18px;
+   padding: 2px 45px 2px 20px
+}
+.input-4{
+    margin-left: 15px;
+     margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 235, 235, 0.922);
+    border-radius: 20px;
+    font-size: 18px;
+   padding: 2px 45px 2px 20px
+}
+.input-5{
+    margin-left: 2px;
+     margin-bottom: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(240, 235, 235, 0.922);
+    border-radius: 20px;
+    font-size: 18px;
+   padding: 2px 45px 2px 20px
+}

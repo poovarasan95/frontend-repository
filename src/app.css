@@ -5,70 +5,12 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    background-color: rgb(171, 223, 171);
-}
-.container{
-    max-width: 500px;
-    background-color: #fff;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0,0,0.5);
-}
-.title{
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 40px;
-}
-.label{
-margin: 10px;
-padding:10px ;
-font-size: 20px;
-}
-.input{
-    margin: 20px;
-}
-.btn{
+    background:url('./assets/1.jpg.jpg');
+    justify-content: center;
     align-items: center;
-    padding:5px 10px;
-    width: 150px;
-    background-color: rgb(112, 150, 135);
-    border: none;
-    border-radius: 4px;
-}
-.button{
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgb(112, 150, 135);
-    width:150px ;
-    margin: 10px;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
     
 }
-.register{
-    margin: 10px;
-}
-.main{
-    display: flex;
-    margin: 17px;
-    
-}
-.input-0{
-    margin-left: 28px;
-}
-.input-2{
-    margin-left: 18px;
-}
-.input-1{
-    margin-left: 5px;
-}
-.input-3{
-    margin-left: 10px;
-}
-.input-4{
-    margin-left: 15px;
-}
-.input-5{
-    margin-left: 2px;
-}
+

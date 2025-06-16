@@ -160,10 +160,14 @@ const columns = leaveType === 'upcoming'
   return (
     <>
     <div>
+     
     <h4>Welcome - {user?.username}</h4>
     <p>Leave Balance- {user?.leaveBalance}days</p>
-   <div className='d-flex justify-content-end pb-5 me-5'>
-    <Button type="primary" style={{alignItems:'center'}}onClick={() => setVisible(true)}>Apply for Leave</Button>
+    <div className='d-flex justify-content-end pb-5 me-5'>
+    <Button type="primary" style={{alignItems:'center', position: 'fixed',
+    top: 80,
+    right: 40,
+    zIndex: 1000,}}onClick={() => setVisible(true)}>Apply for Leave</Button>
     </div>
     <Modal
       title="Apply for Leave"

@@ -1,8 +1,11 @@
- import React, { useState } from 'react'
+import React, { useState } from 'react'
 import { Link} from 'react-router-dom'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
- 
+import { FaUser} from "react-icons/fa";
+import { RiLockPasswordFill } from "react-icons/ri";
+import'./login.css'; 
+
  export const Loginpage = () => {
     const[register,setRegister]=useState('');
     const[password,setPassword]=useState('');
@@ -35,29 +38,25 @@ import { useNavigate } from 'react-router-dom';
       }
     }
    return (
-     <div className='container'>
-           <div>
-            <h2 className='title'>Login Page</h2>
-            {error && <p className='text-danger '>{error}</p>}
+     <div className="wrapper">
+           <div className='form-box login'>
             <form onSubmit={handlesubmit}>
-              <div className='input-label' >
-              <label className='label' htmlFor='register'>
-              <strong>Register NO :</strong>
-              </label>
-              <input type='text' name='register'onChange={(e)=>setRegister(e.target.value)} required/>
+              <h1>Login Page</h1>
+              {error && <p className='text-danger '>{error}</p>}
+              <div className="input-box" >
+              <input type='text' placeholder='Register Number' name='register'onChange={(e)=>setRegister(e.target.value)} required/>
+              <FaUser className="icon" />
               </div>
-              <div>
-              <label className='label' htmlFor='password'>
-              <strong>Password :</strong>
-              </label>
-              <input type='password' name='password'className='input'onChange={(e)=>setPassword(e.target.value)} required/>
+              <div className="input-box">
+              <input type='password'placeholder='Password' name='password'onChange={(e)=>setPassword(e.target.value)} required/>
+              <RiLockPasswordFill  className="icon" />
               </div>
               <center>
-              <button type='submit' className='button'>Login</button>
+              <button type='submit'>Login</button>
               </center>
             </form>
             <center>
-              <p className='register'>Register Account</p>
+              <p className='register'>Don't have an Account ?</p>
               <Link to="/signup" className='btn'>Singup</Link>
               </center>
            </div>
