@@ -12,7 +12,9 @@ export const Signup = () => {
     const [gender,setGender]=useState('');
     const [password,setPassword]=useState('');
     const navigate=useNavigate()
-   const apiUrl = import.meta.env.VITE_API_URL;
+    let apiUrl = import.meta.env.VITE_API_URL;
+
+    
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
